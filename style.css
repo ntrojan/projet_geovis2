@@ -1,0 +1,121 @@
+/* Document de définition du style d'interface. Les commentaires pour le code sont là en principe sans duplication, ils sont expliqués une fois. */
+
+/* Layout générale */
+body {
+    margin: 0; 
+    padding: 0; 
+    display: flex; /* Mise en page flexible */
+    flex-direction: column; /* Organiser les éléments dans une colonne */
+    height: 100vh; /* 100% de la hauteur de l'écran */
+    width: 100vw; /* 100% de la largeur de l'écran  */
+    overflow: hidden; /* Désactiver le scrolling */
+}
+
+/* Titre */
+#header {
+    text-align: center; /* Centre le contenu du titre */
+    position: absolute; /* Positionne le titre de manière absolue */
+    z-index: 1000; /* Garantit que le titre est au-dessus des autres éléments */
+    top: 5px; /* Positionne le titre à 5px du bord supérieur */
+    left: 10px; /* Positionne le titre à 10px du bord gauche */
+    width: 1471px; /* Largeur */
+    height: 50px; /* Hauteur */
+    padding: 10px; /* Espace intérieur */
+    border-radius: 10px; /* Bords arrondis */
+    background-color: #cecece; /* Couleur de fond */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Ombre */
+}
+
+#header h1 {
+    margin: 0; 
+    font-size: 24px; /* Dimension font */
+    color: #333; /* Couleur du texte */
+    font-family: "Trebuchet MS", sans-serif; /* Style du font */
+}
+
+#header h2 {
+    margin: 5px 0 0; 
+    font-size: 16px; 
+    color: #666; 
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+/* Container des filtres */
+#filters {
+    position: absolute; 
+    bottom: 15px; /* Position depuis le bas */
+    left: 20px; /* Position depuis la gauche */
+    display: flex; /* Position flexible */
+    height: 25px; /* Hauteur */
+    justify-content: space-around; /* Distance uniforme entre les filtres */
+    align-items: center; /* Alignement vertical */
+    padding: 10px; /* Espace interne du conteneur */
+    background-color: #f5f5f5; /* BAckground couleur */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); 
+    border-top: 1px solid #ddd; /* épaisseur marge */
+    border-bottom: 1px solid #ddd; 
+    z-index: 1000; 
+}
+
+/* Filtres individuels */
+#filters select {
+    padding: 5px; /* Espace intérieur */
+    font-size: 10px; /* Taille */
+    margin: 10px; /* Espace entre filtres */
+    font-family: 'Trebuchet MS'; /* Style du font */
+    font-weight: normal; /* Poids du texte */
+}
+
+#filters label {
+    margin-right: 5px; /* Marge à droite */
+    font-size: 10px; 
+    font-family: 'Trebuchet MS'; 
+    font-weight: bold; 
+}
+
+/* Carte */
+#map {
+    position: absolute;
+    top: 80px; /* Position depuis l'haut */
+    left: 10px; /* Position depuis gauche */
+    width: 1150px; /* Largeur */
+    height: 767px; /* Hauteur */
+    border: 1px solid #ddd; /* Couleur du bord */
+    border-radius: 5px; /* Bords arrondis */
+}
+
+
+/* Graphiques */
+#year-chart, #canton-chart, #scatter-plot {
+    position: absolute; 
+    background: white; 
+    border: 1px solid #ddd; 
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); 
+    border-radius: 5px; 
+}
+
+/* Positionnement des graphiques */
+#year-chart {
+    top: 80px; 
+    right: 10px; 
+    z-index: 1000; 
+    width: 330px; 
+    height: 250px; 
+}
+
+#canton-chart {
+    top: 337px; 
+    right: 10px; 
+    z-index: 1000; 
+    width: 330px; 
+    height: 250px; 
+}
+
+#scatter-plot {
+    bottom: 10px; 
+    right: 10px; 
+    z-index: 1000; 
+    width: 330px; 
+    height: 250px;
+}
+
